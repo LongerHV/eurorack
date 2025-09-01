@@ -1,4 +1,20 @@
+Build instructions
+==================
+
+```bash
+# Yarns (connected to STLink v2 via JTAG adapter)
+./bin/mutable-env make -f yarns/makefile hex
+./bin/mutable-env make -f yarns/bootloader/makefile hex
+./bin/mutable-env make -f yarns/makefile upload_combo_jtag_no_erase
+
+# Plaits (connected to STLink v2 via SWD)
+./bin/mutable-env make -f plaits/makefile hex
+./bin/mutable-env make -f plaits/bootloader/makefile hex
+./bin/mutable-env make -f plaits/makefile upload
+```
+
 Mutable Instruments' Eurorack Modules.
+======================================
 
 * [Blades](http://mutable-instruments.net/modules/blades): Dual multimode filter.
 * [Blinds](http://mutable-instruments.net/modules/blinds): Quad VC-polarizer.
