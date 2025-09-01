@@ -272,7 +272,8 @@ void Part::Start(bool started_by_keyboard) {
   arp_seq_prescaler_ = 0;
 
   seq_step_ = 0;
-  seq_running_ = !started_by_keyboard;
+  // seq_running_ = !started_by_keyboard;
+  seq_running_ = false;
   
   release_latched_keys_on_next_note_on_ = false;
   ignore_note_off_messages_ = false;
